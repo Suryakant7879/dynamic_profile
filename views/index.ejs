@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-header {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .profile-body {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2><%= user.name %></h2>
+            <p class="text-muted">Age: <%= user.age %></p>
+            <p class="text-muted">A passionate <%= user.passion %>.</p>
+        </div>
+        
+        <div class="profile-body">
+            <h4>About Me</h4>
+            <p>I love coding and enjoy creating beautiful web applications.</p>
+            
+            <h4>Contact Information</h4>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> <%= user.email %></li>
+                <li><strong>Phone:</strong> <%= user.phone %></li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
